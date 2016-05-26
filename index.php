@@ -24,6 +24,7 @@ if (isset($_GET['search'])) {
 }
     ?>
 <?php
+
 }; ?>
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -250,6 +251,7 @@ if (isset($_GET['search'])) {
   </div>
   <!-- If the company id is set -->
   <?php
+
 }; ?>
   <?php if (isset($search)) {
     ?>
@@ -266,6 +268,7 @@ if (isset($_GET['search'])) {
 
   <!-- If search is used -->
   <?php
+
 }; ?>
   <div class="container ">
     <div class="row">
