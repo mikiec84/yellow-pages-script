@@ -6,9 +6,10 @@ error_reporting(E_ALL);
 
 function startapi()
 {
-    if (isset($_GET['id'])) {
-      $id = $_GET['id'];
-    }
+  $id = isset($_GET['id']) ? $_GET['id'] : null;
+  if (empty($id)) {
+      $id = '159';
+  }
     if (isset($_GET['type'])) {
         switch ($_GET['type']) {
 
