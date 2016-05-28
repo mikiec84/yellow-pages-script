@@ -12,7 +12,7 @@ function startapi()
   case 'Get US Email results':
   header('Content-Type: application/json');
             db_connect();
-            $sql = 'SELECT * FROM `us-email`';
+            $sql = 'SELECT * FROM `us-email` WHERE `State` <> ""';
             $result = db_query($sql);
               if ($result === false) {
                   return false;
