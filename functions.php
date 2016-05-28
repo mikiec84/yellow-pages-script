@@ -2,13 +2,12 @@
 
 function loadresult($apicall)
 {
+    $json = file_get_contents($apicall);
+    $resultArray = json_decode($json, true);
 
-  $json = file_get_contents($apicall);
-  $resultArray = json_decode($json, true);
-
-  foreach ($resultArray as $key => $value) {
-    define($key, $value);
-  }
+    foreach ($resultArray as $key => $value) {
+        define($key, $value);
+    }
 }
 
 function loadresults($apicall)

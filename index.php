@@ -126,9 +126,9 @@ if (isset($_GET['search'])) {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="faxNumber" content="'.fax_number.'">'.fax_number.'</span></p><small>fax number</small></blockquote></div>';
 }
     ?>
-        <?php if (strlen(email) == 0) {
+        <?php if (strlen(Email) == 0) {
 } else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="email" content="'.email.'"><a href="mailto:'.email.'" >'.email.'</a></span></p><small>email</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="email" content="'.Email.'"><a href="mailto:'.Email.'" >'.Email.'</a></span></p><small>email</small></blockquote></div>';
 }
     ?>
         <?php if (strlen(website) == 0) {
