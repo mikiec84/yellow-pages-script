@@ -254,8 +254,6 @@ if (isset($_GET['search'])) {
       </div>
     </div>
     <?php
-    $constr_url = 'http://'.$domain.'/api/?type=Get+US+Email+results';
-    echo $constr_url;
     loadrandomresults('http://'.$domain.'/api/?type=Get+US+Email+results');?>
   </div>
 
