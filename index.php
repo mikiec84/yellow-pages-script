@@ -25,11 +25,8 @@ if (isset($_GET['search'])) {
 <?php
 
 }; ?>
-<!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="style.css">
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -56,28 +53,11 @@ if (isset($_GET['search'])) {
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-      <!--      <ul class="nav navbar-nav navbar-right">
-
-        <li><a href="#">Link</a> </li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a> </li>
-            <li><a href="#">Another action</a> </li>
-            <li><a href="#">Something else here</a> </li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a> </li>
-          </ul>
-        </li>
-
-      </ul>-->
     </div>
-    <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container-fluid -->
 </nav>
 <?php if (isset($vid)) {
     ?>
-<!-- If the company id is set -->
 <header>
   <div class="jumbotron">
     <div class="container">
@@ -120,9 +100,6 @@ if (isset($_GET['search'])) {
     </div>
   </div>
 </header>
-<!-- / HEADER -->
-
-<!--  SECTION-1 -->
 <section>
   <div class="container ">
     <div class="row">
@@ -275,23 +252,8 @@ if (isset($_GET['search'])) {
         <h2>Companies of the Day</h2>
       </div>
     </div>
-    <?php loadrandomresults('http://canadawhiz.com/api/?type=random&value=6');?>
+    <?php loadrandomresults('api/?type=Get+US+Email+results');?>
   </div>
-
-  <!--
-  <div class="jumbotron">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-9 col-lg-9">
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, praesentium, autem, veritatis error quidem eos fuga atque asperiores magnam deleniti necessitatibus sequi quo</p>
-        </div>
-        <div class=" text-center col-sm-6 col-lg-3 col-sm-offset-3 col-md-3 col-xs-offset-4 col-xs-5 col-lg-offset-0"> <a class="btn  btn-block btn-lg btn-success" href="#" title="">Sign up now!</a> </div>
-      </div>
-    </div>
-  </div>
-  -->
-
-  <!-- /container -->
 
   <div class="container">
     <div class="row">
@@ -318,11 +280,9 @@ if (isset($_GET['search'])) {
       </div>
     </div>
   </div>
-  <!-- / CONTAINER-->
 </section>
 <div class="well"> </div>
 
-<!-- FOOTER -->
 
 <footer class="text-center">
   <div class="container">
