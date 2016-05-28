@@ -1,4 +1,5 @@
 <?php
+
 function db_query($query)
 {
     $connection = db_connect();
@@ -20,5 +21,3 @@ function db_quote($value)
 
     return "'".mysqli_real_escape_string($connection, $value)."'";
 }
-
-?>
