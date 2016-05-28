@@ -90,9 +90,9 @@ if (isset($_GET['search'])) {
     echo '<a class="btn btn-primary btn-lg" href="mailto:'.email.'" role="button">'.email.'</a>';
 }
     ?>
-            <?php if (strlen(website) == 0) {
+            <?php if (strlen(Website) == 0) {
 } else {
-    echo '<a class="btn btn-primary btn-lg" href="'.website.'" role="button">'.website.'</a>';
+    echo '<a class="btn btn-primary btn-lg" href="'.Website.'" role="button">'.Website.'</a>';
 }
     ?>
           </p>
