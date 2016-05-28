@@ -22,7 +22,7 @@ function startapi()
             while ($row = mysqli_fetch_assoc($result)) {
                 $emparray[] = $row;
             }
-            $response = array('data' => $emparray);
+      //      $response = array('data' => $emparray);
             echo json_encode($response);
       break;
 
