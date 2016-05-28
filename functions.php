@@ -62,26 +62,6 @@ function loadresults($apicall)
     echo '</div>';
 }
 
-function loadrandomresults2($apicall)
-{
-    $xml = simplexml_load_file($apicall)
-       or die('Error: Cannot create object');
-    echo '<div class="row">';
-    foreach ($xml->children() as $results) {
-        foreach ($results->children() as $result => $data) {
-            $id = $data->id;
-            $company_name = $data->company_name;
-            $physical_province = $data->physical_province;
-            if ($physical_province == 'British Columbia') {
-                $physical_province = 'BC';
-            };
-            if ($physical_province != '') {
-                echo '<div class="col-lg-4 col-sm-12 text-center"> <div class="circle">'.$physical_province.'</div><h3><a href="http://canadawhiz.com/'.$id.'/'.$company_name.'.html">'.$company_name.'</a></h3><p>'.$company_name.'</p></div>';
-            };
-        }
-    }
-    echo '</div>';
-}
 
 function loadrandomresults($apicall)
 {
@@ -89,7 +69,7 @@ function loadrandomresults($apicall)
     $resultArray = json_decode($json, true);
     echo '<div class="row">';
     foreach ($resultArray as $key => $value) {
-        echo '<div class="col-lg-4 col-sm-12 text-center"> <div class="circle">'.$value['State'].'</div><h3><a href="'.$value['id'].'/'.$value['Business Name'].'.html">'.$value['Business Name'].'</a></h3><p>'.$value['Business Name'].'</p></div>';
+        echo '<div class="col-lg-4 col-sm-12 text-center"> <div class="circle">'.$value['State'].'</div><h3><a href="'.$value['id'].'/'.$value['Business Name'].'.html">'.$value['Business Name'].'</a></h3><p>'.$value['Category'].'</p></div>';
     }
     echo '</div>';
 }
