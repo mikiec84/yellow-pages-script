@@ -6,14 +6,13 @@ error_reporting(E_ALL);
 
 function startapi()
 {
-
     if (isset($_GET['type'])) {
         switch ($_GET['type']) {
 
   case 'Get US Email results':
   header('Content-Type: application/json');
             db_connect();
-            $sql = 'SELECT * from us-email';
+            $sql = 'SELECT * FROM `us-email`';
             $result = db_query($sql);
               if ($result === false) {
                   return false;
