@@ -85,11 +85,11 @@ function loadrandomresults2($apicall)
 
 function loadrandomresults($apicall)
 {
-  $resultArray = json_decode($apicall, true);
-  echo '<div class="row">';
-  foreach ($someArray as $key => $value) {
-    echo '<div class="col-lg-4 col-sm-12 text-center"> <div class="circle">'.$value["State"].'</div><h3><a href="'.$value["id"].'/'.$value["Business Name"].'.html">'.$value["Business Name"].'</a></h3><p>'.$value["Business Name"].'</p></div>';
-  }
+    $resultArray = json_decode($apicall, true);
+    echo '<div class="row">';
+    foreach ($resultArray as $key => $value) {
+        echo '<div class="col-lg-4 col-sm-12 text-center"> <div class="circle">'.$value['State'].'</div><h3><a href="'.$value['id'].'/'.$value['Business Name'].'.html">'.$value['Business Name'].'</a></h3><p>'.$value['Business Name'].'</p></div>';
+    }
     echo '</div>';
 }
 
