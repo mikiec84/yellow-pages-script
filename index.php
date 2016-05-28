@@ -255,7 +255,7 @@ if (isset($_GET['search'])) {
     <?php
     $constr_url = "http://'.$settings_array['website_settings']['domain'].'/api/?type=Get+US+Email+results";
     echo $constr_url;
-    loadrandomresults($constr_url);?>
+  //  loadrandomresults($constr_url);?>
   </div>
 
   <div class="container">
