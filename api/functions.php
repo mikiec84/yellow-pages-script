@@ -6,6 +6,9 @@ error_reporting(E_ALL);
 
 function startapi()
 {
+    if (isset($_GET['id'])) {
+      $id = $_GET['id']
+    }
     if (isset($_GET['type'])) {
         switch ($_GET['type']) {
 
@@ -25,6 +28,22 @@ function startapi()
             $response = array($emparray);
             echo json_encode($emparray);
       break;
+      case 'Get US Email result':
+      header('Content-Type: application/json');
+                db_connect();
+                $sql = 'SELECT * FROM `us-email` WHERE `id` = $id';
+                $result = db_query($sql);
+                  if ($result === false) {
+                      return false;
+                  }
+
+                $emparray = array();
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $emparray[] = $row;
+                }
+                $response = array($emparray);
+                echo json_encode($emparray);
+          break;
 
 }
     } else {
