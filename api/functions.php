@@ -6,11 +6,12 @@ error_reporting(E_ALL);
 
 function startapi()
 {
-    header('Content-Type: application/json');
+
     if (isset($_GET['type'])) {
         switch ($_GET['type']) {
 
   case 'Get US Email results':
+  header('Content-Type: application/json');
             db_connect();
             $sql = 'SELECT * from us-email';
             $result = db_query($sql);
