@@ -6,10 +6,10 @@ error_reporting(E_ALL);
 
 function startapi()
 {
-  $id = isset($_GET['id']) ? $_GET['id'] : null;
-  if (empty($id)) {
-      $id = '159';
-  }
+    $id = isset($_GET['id']) ? $_GET['id'] : null;
+    if (empty($id)) {
+        $id = '159';
+    }
     if (isset($_GET['type'])) {
         switch ($_GET['type']) {
 
@@ -32,7 +32,7 @@ function startapi()
       case 'Get US Email result':
       header('Content-Type: application/json');
                 db_connect();
-                $sql = 'SELECT * FROM `us-email` WHERE `id` = $id';
+                $sql = "SELECT * FROM `us-email` WHERE `id` = '$id'";
                 $result = db_query($sql);
                   if ($result === false) {
                       return false;
