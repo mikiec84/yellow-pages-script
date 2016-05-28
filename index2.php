@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 header('Content-Type: text/html; charset=iso-8859-1');
+//ini_set('display_errors', '1');
 include 'functions.php';
 if (isset($_GET['id'])) {
     $vid = $_GET['id'];
