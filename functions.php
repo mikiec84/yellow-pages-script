@@ -85,7 +85,6 @@ function loadrandomresults2($apicall)
 
 function loadrandomresults($apicall)
 {
-    echo $apicall;
     $json = file_get_contents($apicall);
     $resultArray = json_decode($json, true);
     print_r $resultArray;
