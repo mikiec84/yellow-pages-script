@@ -5,7 +5,7 @@ include 'settings.php';
 include 'functions.php';
 if (isset($_GET['id'])) {
     $vid = $_GET['id'];
-    loadresult("http://canadawhiz.com/api/?type=readresult&value=$vid");
+    loadresult("http://<?php echo $domain;?>/api/?type=readresult&value=$vid");
 }
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
@@ -39,7 +39,7 @@ if (isset($_GET['search'])) {
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="http://canadawhiz.com">canadawhiz.com</a> </div>
+      <a class="navbar-brand" href="http://<?php echo $domain;?>"><?php echo $domain;?></a> </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -48,7 +48,7 @@ if (isset($_GET['search'])) {
         <li><a href="#">Link</a> </li>
       </ul>
       -->
-      <form action="http://canadawhiz.com/" method="get" class="navbar-form navbar-right" role="search">
+      <form action="http://<?php echo $domain;?>/" method="get" class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input name="search" type="text" class="form-control" id="search" placeholder="Search">
         </div>
@@ -267,18 +267,18 @@ if (isset($_GET['search'])) {
       <div class="col-xs-6 col-lg-4">
         <h3>Add your Business</h3>
         <p> <em class="icon-desktop "></em>If you wish to be part of our directory or want to add your business or contact us for any other enquiry - like featured ads use the link bellow</p>
-        <p><a class="btn btn-default" href="mailto:info@upg.gr?subject=add entry on canadawhiz.com&body=Hi,please add my company on your database : Here are the details :">Add Business </a></p>
+        <p><a class="btn btn-default" href="mailto:<?php echo $email;?>?subject=add entry on <?php echo $domain;?>&body=Hi,please add my company on your database : Here are the details :">Add Business </a></p>
       </div>
       <div class="col-xs-6 col-lg-4">
         <h3>Claim / Edit your Business</h3>
         <p> <i class="icon-desktop "></i> Do you something not correct in your entry? We charge an administration fee of 10$ per change (currently free). Click the link bellow to pay the fee via Paypal and your change will be implemented in the next 5 business days.</p>
-      <?php echo isset($vid) ? '<p><a class="btn btn-default" href="mailto:info@upg.gr?subject=edit entry from canadawhiz.com&body=Hi,please edit my company on your database : '.$_SERVER['REQUEST_URI'].' Here are the changes I need :">Edit Entry </a></p>' : ' '; ?>
+      <?php echo isset($vid) ? '<p><a class="btn btn-default" href="mailto:<?php echo $email;?>?subject=edit entry from <?php echo $domain;?>&body=Hi,please edit my company on your database : '.$_SERVER['REQUEST_URI'].' Here are the changes I need :">Edit Entry </a></p>' : ' '; ?>
       </div>
       <div class="col-xs-6 col-lg-4">
         <h3>Request Removal</h3>
         <p> <i class="icon-desktop "></i> Our Database comes from the official governemental Canadian website. If you do not wish to be listed on this directory any more, click bello and provide some justification / proof of ownership</p>
 
-     <?php echo isset($vid) ? '<p><a class="btn btn-default" href="mailto:info@upg.gr?subject=remove entry from canadawhiz.com&body=Hi,please remove my company from your database : '.$_SERVER['REQUEST_URI'].'">Remove Entry </a></p>' : ' '; ?>
+     <?php echo isset($vid) ? '<p><a class="btn btn-default" href="mailto:<?php echo $email;?>?subject=remove entry from canadawhiz.com&body=Hi,please remove my company from your database : '.$_SERVER['REQUEST_URI'].'">Remove Entry </a></p>' : ' '; ?>
       </div>
     </div>
   </div>
@@ -290,7 +290,7 @@ if (isset($_GET['search'])) {
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <p>&copy; Canada Business Directory | Operated by <a href="http://upg.gr" rel="nofollow">upg.gr</a> <?php echo isset($vid) ? '<a HREF="mailto:info@upg.gr?subject=remove entry from canadawhiz.com&body=Hi,please remove my company from your database : '.$_SERVER['REQUEST_URI'].'">Remove Entry</a>' : ' '; ?></p>
+        <p>&copy; <?php echo $title;?> | Operated by <a href="<?php echo $operatedby;?>" rel="nofollow"><?php echo $operatedbysort;?></a> <?php echo isset($vid) ? '<a HREF="mailto:<?php echo $email;?>?subject=remove entry from <?php echo $domain;?>&body=Hi,please remove my company from your database : '.$_SERVER['REQUEST_URI'].'">Remove Entry</a>' : ' '; ?></p>
       </div>
     </div>
   </div>

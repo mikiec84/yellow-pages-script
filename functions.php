@@ -62,7 +62,6 @@ function loadresults($apicall)
     echo '</div>';
 }
 
-
 function loadrandomresults($apicall)
 {
     $json = file_get_contents($apicall);
