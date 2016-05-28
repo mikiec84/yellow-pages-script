@@ -252,7 +252,7 @@ if (isset($_GET['search'])) {
         <h2>Companies of the Day</h2>
       </div>
     </div>
-    <?php loadrandomresults('api/?type=Get+US+Email+results');?>
+    <?php loadrandomresults("http://'.$settings_array['website_settings']['domain'].'/api/?type=Get+US+Email+results");?>
   </div>
 
   <div class="container">
