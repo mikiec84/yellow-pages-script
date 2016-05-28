@@ -1,4 +1,5 @@
 <?php
+
 function loadresult($apicall)
 {
     $xml = simplexml_load_file($apicall)
