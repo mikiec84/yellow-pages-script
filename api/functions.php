@@ -9,21 +9,21 @@ include 'dbconf.php';
 
 function startapi()
 {
-header('Content-Type: application/json');
+    header('Content-Type: application/json');
     if (isset($_GET['type'])) {
         switch ($_GET['type']) {
 
   case 'Get US Email results':
             db_connect();
-            $sql = "SELECT * from us-email";
+            $sql = 'SELECT * from us-email';
             $result = db_query($sql);
               if ($result === false) {
                   return false;
-                }
+              }
 
             $emparray = array();
             while ($row = mysqli_fetch_assoc($result)) {
-              $emparray[] = $row;
+                $emparray[] = $row;
             }
             $response = array('data' => $emparray);
             echo json_encode($response);

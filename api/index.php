@@ -6,4 +6,4 @@ header('Content-Type: text/html; charset=iso-8859-1');
 include 'dbconf.php';
 include 'functions.php';
 
-getapicall($_GET['value']);
+startapi();
