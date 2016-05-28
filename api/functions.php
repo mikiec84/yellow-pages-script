@@ -33,6 +33,7 @@ function startapi()
 		<option selected>Select api response</option>
     <option>---------US Email Database------</option>
     <option>Get US Email results</option>
+    <option>Get US Email result</option>
 	</select>
 	<noscript><input type='submit' value='Submit'></noscript>
 	</form>";
