@@ -131,9 +131,9 @@ if (isset($_GET['search'])) {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="email" content="'.Email.'"><a href="mailto:'.Email.'" >'.Email.'</a></span></p><small>email</small></blockquote></div>';
 }
     ?>
-        <?php if (strlen(website) == 0) {
+        <?php if (strlen(Website) == 0) {
 } else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><a href="'.website.'" itemprop="url" rel="nofollow target="_new" content="'.website.'">'.website.'</a></p><small>website</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p><a href="'.Website.'" itemprop="url" rel="nofollow target="_new" content="'.Website.'">'.Website.'</a></p><small>website</small></blockquote></div>';
 }
     ?>
       </organization>
