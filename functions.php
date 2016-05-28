@@ -1,6 +1,4 @@
 <?php
-
-$settings_array = parse_ini_file('settings.ini');
 function loadresult($apicall)
 {
     $xml = simplexml_load_file($apicall)

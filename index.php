@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 header('Content-Type: text/html; charset=iso-8859-1');
+include 'settings.php';
 include 'functions.php';
 if (isset($_GET['id'])) {
     $vid = $_GET['id'];
@@ -253,7 +254,7 @@ if (isset($_GET['search'])) {
       </div>
     </div>
     <?php
-    $constr_url = 'http://'.$settings_array['website_settings']['domain'].'/api/?type=Get+US+Email+results';
+    $constr_url = 'http://'.$domain.'/api/?type=Get+US+Email+results';
     echo $constr_url;
   //  loadrandomresults($constr_url);?>
   </div>
