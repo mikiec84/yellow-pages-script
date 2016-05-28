@@ -23,7 +23,6 @@ function startapi()
                 $emparray[] = $row;
             }
             $response = array($emparray);
-      //      $response = array('data' => $emparray);
             echo json_encode($emparray);
       break;
 
