@@ -12,7 +12,7 @@ function startapi()
   case 'Get US Email results':
   header('Content-Type: application/json');
             db_connect();
-            $sql = 'SELECT * FROM `us-email` WHERE `State` <> ""';
+            $sql = 'SELECT * FROM `us-email` WHERE `State` <> "" ORDER BY RAND() LIMIT 9';
             $result = db_query($sql);
               if ($result === false) {
                   return false;
