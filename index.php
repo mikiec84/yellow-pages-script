@@ -9,7 +9,8 @@ if (isset($_GET['id'])) {
 }
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
-}?>
+}
+var $ZIP;?>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -141,12 +142,12 @@ if (isset($_GET['search'])) {
       <div itemscope itemtype="http://schema.org/Organization">
 
 <?php  if (isset($Business_Name)) {
-      display_if_exists($Business_Name, 'company name');
-  };
-  ?>
+     display_if_exists($Business_Name, 'company name');
+ };
+    ?>
   <?php  if (isset($Company_Name)) {
-        display_if_exists($Company_Name, 'company name');
-    };
+     display_if_exists($Company_Name, 'company name');
+ };
     ?>
         <?php if (!isset($Phone_Number) || strlen($Phone_Number) == 0) {
 } else {
