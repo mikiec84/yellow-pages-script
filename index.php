@@ -116,11 +116,8 @@ if (isset($_GET['search'])) {
     </div>
     <div class="row">
       <organization itemscope itemtype="http://schema.org/Organization">
-        <?php if (isset($Business_Name) && strlen($Business_Name) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="name" content="'.$Business_Name.'">'.$Business_Name.'</span></p><small>company name</small></blockquote></div>';
-}
-    ?>
+        
+  <?php  display_if_exists($Business_Name, 'company name') ?>
         <?php if (isset($Phone_Number) && strlen($Phone_Number) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="telephone" content="'.$Phone_Number.'">'.$Phone_Number.'</span></p><small>telephone number</small></blockquote></div>';
