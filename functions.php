@@ -12,7 +12,7 @@ function display_if_exists_simple($var)
 {
     if (strlen($var) == 0) {
     } else {
-        echo $var;
+        return $var;
     }
 }
 
