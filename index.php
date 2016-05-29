@@ -304,9 +304,9 @@ if (isset($_GET['search'])) {
       </div>
       <div class="col-xs-6 col-lg-4">
         <h3>Request Removal</h3>
-        <p> <i class="icon-desktop "></i> Our Database comes from the official governemental Canadian website. If you do not wish to be listed on this directory any more, click bello and provide some justification / proof of ownership</p>
+        <p> <i class="icon-desktop "></i> Our Database comes from the official governemental website. If you do not wish to be listed on this directory any more, click bellow and provide some justification / proof of ownership</p>
 
-     <?php echo isset($vid) ? '<p><a class="btn btn-default" href=<a HREF="mailto:'.$email.'?subject=remove entry from '.$domain.'&body=Hi,please remove my company from your database : '.$_SERVER['REQUEST_URI'].'">Remove Entry</a>' : ' '; ?>
+     <?php echo isset($vid) ? '<p><a class="btn btn-default" HREF="mailto:'.$email.'?subject=remove entry from '.$domain.'&body=Hi,please remove my company from your database : '.$_SERVER['REQUEST_URI'].'">Remove Entry</a>' : ' '; ?>
       </div>
     </div>
   </div>
