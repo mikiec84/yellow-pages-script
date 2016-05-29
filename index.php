@@ -145,7 +145,7 @@ if (isset($_GET['search'])) {
       <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
       <?php if (isset($Address) && strlen($Address) == 0) {
 } else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$State.'">'.$State.'</span>, <span itemprop="postalCode" content="'.$Postal.'">'.$Postal.'</span>, <span itemprop="addressCountry" content="'.$USA.'">'.$USA.'</span></p><small>mailing address</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$State.'">'.$State.'</span>, <span itemprop="postalCode" content="'.$Postal.'">'.$Postal.'</span>, <span itemprop="addressCountry" content="USA">USA</span></p><small>mailing address</small></blockquote></div>';
 }
     ?>
       </address>
