@@ -23,6 +23,13 @@ if (isset($_GET['search'])) {
     echo '<title>'.$Business_Name.' - '.(substr($Phone_Number, 0, -3).'xxx').' Information provided by '.$domain.'</title>';
 }
     ?>
+
+    <?php if (!isset($Company_Name)  || strlen($Company_Name) == 0) {
+    } else {
+        echo '<title>'.$Company_Name.' - '.(substr($Phone_Number, 0, -3).'xxx').' Information provided by '.$domain.'</title>';
+    }
+        ?>
+
 <?php
 
 }; ?>
@@ -64,9 +71,26 @@ if (isset($_GET['search'])) {
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h1 class="text-center"><?php echo $Business_Name;
-    ?></h1>
+          <h1 class="text-center">
+            <?php if (!isset($Business_Name)  || strlen($Business_Name) == 0) {
+            } else {
+                echo $Business_Name;
+            }
+                ?>
+
+                <?php if (!isset($Company_Name)  || strlen($Company_Name) == 0) {
+                } else {
+                    echo $Company_Name;
+                }
+                    ?>
+</h1>
           <p class="text-center">
+            <?php if (!isset($SIC_Code_Description)  || strlen($SIC_Code_Description) == 0) {
+            } else {
+            echo $SIC_Code_Description;
+            }
+            ?>
+
             <?php if (!isset($Category)  || strlen($Category) == 0) {
 } else {
     echo $Category;
@@ -106,23 +130,27 @@ if (isset($_GET['search'])) {
   <div class="container ">
     <div class="row">
       <div class="col-lg-12 page-header text-center">
-        <h2>Everything we have on <?php echo $Business_Name;
-    ?></h2>
+        <h2>Everything we have on <?php if (!isset($Business_Name)  || strlen($Business_Name) == 0) {
+        } else {
+        echo $Business_Name;
+        }
+        ?></h2>
       </div>
     </div>
     <div class="row">
       <div itemscope itemtype="http://schema.org/Organization">
 
   <?php  display_if_exists($Business_Name, 'company name') ?>
+  <?php  display_if_exists($Company_Name, 'company name') ?>
 
         <?php if (!isset($Phone_Number) || strlen($Phone_Number) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="telephone" content="'.$Phone_Number.'">'.$Phone_Number.'</span></p><small>telephone number</small></blockquote></div>';
 }
     ?>
-        <?php if (!isset($fax_number) || strlen($fax_number) == 0) {
+        <?php if (!isset($Fax_number) || strlen($Fax_number) == 0) {
 } else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="faxNumber" content="'.$fax_number.'">'.$fax_number.'</span></p><small>fax number</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="faxNumber" content="'.$Fax_number.'">'.$Fax_number.'</span></p><small>fax number</small></blockquote></div>';
 }
     ?>
         <?php if (!isset($Email) || strlen($Email) == 0) {
@@ -137,9 +165,19 @@ if (isset($_GET['search'])) {
     ?>
       </div>
       <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <?php if (!isset($Address) || strlen($Address) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$State.'">'.$State.'</span>, <span itemprop="postalCode" content="'.$Postal.'">'.$Postal.'</span>, <span itemprop="addressCountry" content="USA">USA</span></p><small>mailing address</small></blockquote></div>';
+      <?php if (!isset($Address) || strlen($Address) == 0) {} else {
+    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.','.if (!isset($City)  || strlen($City) == 0) {
+    } else {echo $City;}.'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$State.'">'.$State.'</span>,
+<span itemprop="postalCode" content="'.if (!isset($Postal)  || strlen($Postal) == 0) {} else {echo $Postal;}.if (!isset($ZIP)  || strlen($ZIP) == 0) {
+    } else {
+    echo $ZIP;
+  }.'">'.if (!isset($Postal)  || strlen($Postal) == 0) {
+    } else {
+    echo $Postal;
+  }.if (!isset($ZIP)  || strlen($ZIP) == 0) {
+    } else {
+    echo $ZIP;
+  }.'</span>, <span itemprop="addressCountry" content="USA">USA</span></p><small>mailing address</small></blockquote></div>';
 }
     ?>
       </div>
@@ -148,8 +186,16 @@ if (isset($_GET['search'])) {
     if (isset($average_earning)) {
         display_if_exists($average_earning, 'average earning');
     };
-    if (isset($primary_contact_name)) {
-        display_if_exists($primary_contact_name, 'primary contact name');
+
+    //us db
+
+    if (isset($Revenue)) {
+        display_if_exists($Revenue, 'Revenue');
+    };
+
+
+    if (isset($Company_Contact)) {
+        display_if_exists($Company_Contact, 'primary contact name');
     };
     if (isset($primary_contact_phone)) {
         display_if_exists($primary_contact_phone, 'primary contact phone');
@@ -172,17 +218,17 @@ if (isset($_GET['search'])) {
     if (isset($naics_secondary)) {
         display_if_exists($naics_secondary, 'naics secondary');
     };
-    if (isset($sic_primary)) {
-        display_if_exists($sic_primary, 'sic primary');
+    if (isset($SIC_Code)) {
+        display_if_exists($SIC_Code, 'sic number');
     };
-    if (isset($sic_secondary)) {
-        display_if_exists($sic_secondary, 'sic secondary');
+    if (isset($SIC_Code_Description)) {
+        display_if_exists($SIC_Code_Description, 'Description');
     };
     if (isset($sales_volume)) {
         display_if_exists($sales_volume, 'sales volume');
     };
-    if (isset($number_of_employees)) {
-        display_if_exists($number_of_employees, 'number of employees');
+    if (isset($Employees)) {
+        display_if_exists($Employees, 'number of employees');
     };
     if (isset($products_services)) {
         display_if_exists($products_services, 'products services');
