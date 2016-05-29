@@ -124,7 +124,7 @@ if (isset($_GET['search'])) {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="telephone" content="'.$Phone_Number.'">'.$Phone_Number.'</span></p><small>telephone number</small></blockquote></div>';
 }
     ?>
-        <?php if (!isset($fax_number) && strlen($fax_number) == 0) {
+        <?php if (!isset($fax_number) || strlen($fax_number) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="faxNumber" content="'.$fax_number.'">'.$fax_number.'</span></p><small>fax number</small></blockquote></div>';
 }
