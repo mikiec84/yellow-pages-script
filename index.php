@@ -119,29 +119,29 @@ if (isset($_GET['search'])) {
 
   <?php  display_if_exists($Business_Name, 'company name') ?>
 
-        <?php if (isset($Phone_Number) && strlen($Phone_Number) == 0) {
+        <?php if (!isset($Phone_Number) && strlen($Phone_Number) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="telephone" content="'.$Phone_Number.'">'.$Phone_Number.'</span></p><small>telephone number</small></blockquote></div>';
 }
     ?>
-        <?php if (isset($fax_number) && strlen($fax_number) == 0) {
+        <?php if (!isset($fax_number) && strlen($fax_number) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="faxNumber" content="'.$fax_number.'">'.$fax_number.'</span></p><small>fax number</small></blockquote></div>';
 }
     ?>
-        <?php if (isset($Email) && strlen($Email) == 0) {
+        <?php if (!isset($Email) && strlen($Email) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="email" content="'.$Email.'"><a href="mailto:'.$Email.'" >'.$Email.'</a></span></p><small>email</small></blockquote></div>';
 }
     ?>
-        <?php if (isset($Website) && strlen($Website) == 0) {
+        <?php if (!isset($Website) && strlen($Website) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><a href="'.$Website.'" itemprop="url" rel="nofollow target="_new" content="'.$Website.'">'.$Website.'</a></p><small>website</small></blockquote></div>';
 }
     ?>
       </organization>
       <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <?php if (isset($Address) && strlen($Address) == 0) {
+      <?php if (!isset($Address) && strlen($Address) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$State.'">'.$State.'</span>, <span itemprop="postalCode" content="'.$Postal.'">'.$Postal.'</span>, <span itemprop="addressCountry" content="USA">USA</span></p><small>mailing address</small></blockquote></div>';
 }
