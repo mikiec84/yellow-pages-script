@@ -7,6 +7,3 @@ if (isset($_GET['id'])) {
     loadresult('http://'.$domain.'/api/?type=Get+US+Email+result&id='.$vid);
 }
 ?>
-
-<?php echo 'ddd';
-echo $Business_Name; ?>

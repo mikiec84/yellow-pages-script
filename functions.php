@@ -4,7 +4,6 @@ function loadresult($apicall)
 {
     $json = file_get_contents($apicall);
     $json_array = json_decode($json, true);
-    echo $apicall;
     foreach ($json_array[0] as $key => $value) {
         global $$key;
         $$key = $value;

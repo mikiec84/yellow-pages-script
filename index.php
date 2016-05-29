@@ -18,9 +18,9 @@ if (isset($_GET['search'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php if (isset($vid)) {
     ?>
-<?php if (strlen(company_name) == 0) {
+<?php if (strlen($Business_Name) == 0) {
 } else {
-    echo '<title>'.company_name.' - '.(substr(telephone_number, 0, -3).'xxx').' Information provided by Canadawhiz.com</title>';
+    echo '<title>'.$Business_Name.' - '.(substr($Phone_Number, 0, -3).'xxx').' Information provided by Canadawhiz.com</title>';
 }
     ?>
 <?php
@@ -64,7 +64,7 @@ if (isset($_GET['search'])) {
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h1 class="text-center"><?php echo company_name;
+          <h1 class="text-center"><?php echo $Business_Name;
     ?></h1>
           <?php
           $prof = profile;
@@ -80,19 +80,19 @@ if (isset($_GET['search'])) {
           </p>
           <p>&nbsp;</p>
           <p class="text-center">
-            <?php if (strlen(telephone_number) == 0) {
+            <?php if (strlen($Phone_Number) == 0) {
 } else {
-    echo '<a class="btn btn-primary btn-lg" href="tel:'.telephone_number.'" role="button">'.telephone_number.'</a>';
+    echo '<a class="btn btn-primary btn-lg" href="tel:'.$Phone_Number.'" role="button">'.$Phone_Number.'</a>';
 }
     ?>
-            <?php if (strlen(email) == 0) {
+            <?php if (strlen($Email) == 0) {
 } else {
-    echo '<a class="btn btn-primary btn-lg" href="mailto:'.email.'" role="button">'.email.'</a>';
+    echo '<a class="btn btn-primary btn-lg" href="mailto:'.$Email.'" role="button">'.$Email.'</a>';
 }
     ?>
-            <?php if (strlen(Website) == 0) {
+            <?php if (strlen($Website) == 0) {
 } else {
-    echo '<a class="btn btn-primary btn-lg" href="'.Website.'" role="button">'.Website.'</a>';
+    echo '<a class="btn btn-primary btn-lg" href="'.$Website.'" role="button">'.$Website.'</a>';
 }
     ?>
           </p>
@@ -105,7 +105,8 @@ if (isset($_GET['search'])) {
   <div class="container ">
     <div class="row">
       <div class="col-lg-12 page-header text-center">
-        <h2>Everything we have on <?php echo $Business_Name;?></h2>
+        <h2>Everything we have on <?php echo $Business_Name;
+    ?></h2>
       </div>
     </div>
     <div class="row">
