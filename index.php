@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
 }
-var $ZIP;?>
+$ZIP = '';?>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
