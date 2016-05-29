@@ -105,21 +105,19 @@ if (isset($_GET['search'])) {
   <div class="container ">
     <div class="row">
       <div class="col-lg-12 page-header text-center">
-        <h2>Everything we have on <?php echo $Business_Name;
-    echo $resultArray['Business Name'];
-    ?></h2>
+        <h2>Everything we have on <?php echo $Business_Name;?></h2>
       </div>
     </div>
     <div class="row">
       <organization itemscope itemtype="http://schema.org/Organization">
-        <?php if (strlen(company_name) == 0) {
+        <?php if (strlen($Business_Name) == 0) {
 } else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="name" content="'.company_name.'">'.company_name.'</span></p><small>company name</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="name" content="'.$Business_Name.'">'.$Business_Name.'</span></p><small>company name</small></blockquote></div>';
 }
     ?>
-        <?php if (strlen(telephone_number) == 0) {
+        <?php if (strlen($Phone_Number) == 0) {
 } else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="telephone" content="'.telephone_number.'">'.telephone_number.'</span></p><small>telephone number</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="telephone" content="'.$Phone_Number.'">'.$Phone_Number.'</span></p><small>telephone number</small></blockquote></div>';
 }
     ?>
         <?php if (strlen(fax_number) == 0) {
@@ -127,21 +125,21 @@ if (isset($_GET['search'])) {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="faxNumber" content="'.fax_number.'">'.fax_number.'</span></p><small>fax number</small></blockquote></div>';
 }
     ?>
-        <?php if (strlen(Email) == 0) {
+        <?php if (strlen($Email) == 0) {
 } else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="email" content="'.Email.'"><a href="mailto:'.Email.'" >'.Email.'</a></span></p><small>email</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="email" content="'.$Email.'"><a href="mailto:'.$Email.'" >'.$Email.'</a></span></p><small>email</small></blockquote></div>';
 }
     ?>
-        <?php if (strlen(Website) == 0) {
+        <?php if (strlen($Website) == 0) {
 } else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><a href="'.Website.'" itemprop="url" rel="nofollow target="_new" content="'.Website.'">'.Website.'</a></p><small>website</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p><a href="'.$Website.'" itemprop="url" rel="nofollow target="_new" content="'.$Website.'">'.$Website.'</a></p><small>website</small></blockquote></div>';
 }
     ?>
       </organization>
       <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <?php if (strlen(mailing_address) == 0) {
+      <?php if (strlen($Address) == 0) {
 } else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.mailing_address.'">'.mailing_address.'</span>, <span itemprop="addressRegion" content="'.mailing_province.'">'.mailing_province.'</span>, <span itemprop="postalCode" content="'.mailing_postal.'">'.mailing_postal.'</span>, <span itemprop="addressCountry" content="Canada">Canada</span></p><small>mailing address</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$Address.'">'.mailing_province.'</span>, <span itemprop="postalCode" content="'.mailing_postal.'">'.mailing_postal.'</span>, <span itemprop="addressCountry" content="Canada">Canada</span></p><small>mailing address</small></blockquote></div>';
 }
     ?>
       </address>
