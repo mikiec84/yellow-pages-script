@@ -25,10 +25,10 @@ if (isset($_GET['search'])) {
     ?>
 
     <?php if (!isset($Company_Name)  || strlen($Company_Name) == 0) {
-    } else {
-        echo '<title>'.$Company_Name.' - '.(substr($Phone_Number, 0, -3).'xxx').' Information provided by '.$domain.'</title>';
-    }
-        ?>
+} else {
+    echo '<title>'.$Company_Name.' - '.(substr($Phone_Number, 0, -3).'xxx').' Information provided by '.$domain.'</title>';
+}
+    ?>
 
 <?php
 
@@ -73,23 +73,23 @@ if (isset($_GET['search'])) {
         <div class="col-xs-12">
           <h1 class="text-center">
             <?php if (!isset($Business_Name)  || strlen($Business_Name) == 0) {
-            } else {
-                echo $Business_Name;
-            }
-                ?>
+} else {
+    echo $Business_Name;
+}
+    ?>
 
                 <?php if (!isset($Company_Name)  || strlen($Company_Name) == 0) {
-                } else {
-                    echo $Company_Name;
-                }
-                    ?>
+} else {
+    echo $Company_Name;
+}
+    ?>
 </h1>
           <p class="text-center">
             <?php if (!isset($SIC_Code_Description)  || strlen($SIC_Code_Description) == 0) {
-            } else {
-            echo $SIC_Code_Description;
-            }
-            ?>
+} else {
+    echo $SIC_Code_Description;
+}
+    ?>
 
             <?php if (!isset($Category)  || strlen($Category) == 0) {
 } else {
@@ -131,18 +131,23 @@ if (isset($_GET['search'])) {
     <div class="row">
       <div class="col-lg-12 page-header text-center">
         <h2>Everything we have on <?php if (!isset($Business_Name)  || strlen($Business_Name) == 0) {
-        } else {
-        echo $Business_Name;
-        }
-        ?></h2>
+} else {
+    echo $Business_Name;
+}
+    ?></h2>
       </div>
     </div>
     <div class="row">
       <div itemscope itemtype="http://schema.org/Organization">
 
-  <?php  display_if_exists($Business_Name, 'company name') ?>
-  <?php  display_if_exists($Company_Name, 'company name') ?>
-
+<?php  if (isset($Business_Name)) {
+      display_if_exists($Business_Name, 'company name');
+  };
+  ?>
+  <?php  if (isset($Company_Name)) {
+        display_if_exists($Company_Name, 'company name');
+    };
+    ?>
         <?php if (!isset($Phone_Number) || strlen($Phone_Number) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="telephone" content="'.$Phone_Number.'">'.$Phone_Number.'</span></p><small>telephone number</small></blockquote></div>';
@@ -165,7 +170,8 @@ if (isset($_GET['search'])) {
     ?>
       </div>
       <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <?php if (!isset($Address) || strlen($Address) == 0) {} else {
+      <?php if (!isset($Address) || strlen($Address) == 0) {
+} else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.','.display_if_exists_simple($City).'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$State.'">'.$State.'</span>,
 <span itemprop="postalCode" content="'.display_if_exists_simple($Postal).display_if_exists_simple($ZIP).'">'.display_if_exists_simple($Postal).display_if_exists_simple($ZIP).'</span>, <span itemprop="addressCountry" content="USA">USA</span></p><small>mailing address</small></blockquote></div>';
 }
@@ -182,7 +188,6 @@ if (isset($_GET['search'])) {
     if (isset($Revenue)) {
         display_if_exists($Revenue, 'Revenue');
     };
-
 
     if (isset($Company_Contact)) {
         display_if_exists($Company_Contact, 'primary contact name');
