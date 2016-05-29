@@ -8,10 +8,11 @@ function loadresult($apicall)
   //  print_r($resultArray);
   echo $apicall;
     foreach ($json_array[0] as $key => $value) {
-      //  print_r($value);
+        //  print_r($value);
     $$key = $value;
     }
- print_r($Business_Name);
+    echo $Business_Name;
+
 }
 
 function loadresults($apicall)
