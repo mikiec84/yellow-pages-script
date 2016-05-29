@@ -7,8 +7,8 @@ function loadresult($apicall)
   //  print_r($resultArray);
   //  print_r($resultArray);
   echo $apicall;
-    foreach ($resultArray as $key => $value) {
-      echo $value;
+    foreach ($resultArray[] as $key => $value) {
+        echo $value;
         $$key = $value;
         echo $$key;
     }
