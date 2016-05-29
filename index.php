@@ -18,7 +18,7 @@ if (isset($_GET['search'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php if (isset($vid)) {
     ?>
-<?php if (strlen($Business_Name) == 0) {
+<?php if ($Phone_Number) || strlen($Business_Name) == 0) {
 } else {
     echo '<title>'.$Business_Name.' - '.(substr($Phone_Number, 0, -3).'xxx').' Information provided by Canadawhiz.com</title>';
 }
@@ -64,20 +64,21 @@ if (isset($_GET['search'])) {
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h1 class="text-center"><?php echo $Business_Name;  ?></h1>
+          <h1 class="text-center"><?php echo $Business_Name;
+    ?></h1>
           <p class="text-center">
-            <?php if (strlen($Category) == 0) {
+            <?php if ($Phone_Number) || strlen($Category) == 0) {
 } else {
     echo $Category;
 }
-if (strlen($Category_2) == 0) {
-} else {
-    echo ' | '.$Category_2;
-}
-if (strlen($Category_3) == 0) {
-} else {
-    echo ' | '.$Category_3;
-}
+    if ($Phone_Number) || strlen($Category_2) == 0) {
+    } else {
+        echo ' | '.$Category_2;
+    }
+    if ($Phone_Number) || strlen($Category_3) == 0) {
+    } else {
+        echo ' | '.$Category_3;
+    }
     ?>
           </p>
           <p>&nbsp;</p>
@@ -86,14 +87,14 @@ if (strlen($Category_3) == 0) {
 } else {
     echo '<a class="btn btn-primary btn-lg" href="tel:'.$Phone_Number.'" role="button">'.$Phone_Number.'</a>';
 }
-if (!isset($Email) || strlen($Email) == 0) {
-} else {
-    echo '<a class="btn btn-primary btn-lg" href="mailto:'.$Email.'" role="button">'.$Email.'</a>';
-}
- if (!isset($Website) || strlen($Website) == 0) {
-} else {
-    echo '<a class="btn btn-primary btn-lg" href="'.$Website.'" role="button">'.$Website.'</a>';
-}
+    if (!isset($Email) || strlen($Email) == 0) {
+    } else {
+        echo '<a class="btn btn-primary btn-lg" href="mailto:'.$Email.'" role="button">'.$Email.'</a>';
+    }
+    if (!isset($Website) || strlen($Website) == 0) {
+    } else {
+        echo '<a class="btn btn-primary btn-lg" href="'.$Website.'" role="button">'.$Website.'</a>';
+    }
     ?>
           </p>
         </div>
