@@ -10,11 +10,11 @@ function display_if_exists($var, $name)
 
 function display_if_exists_simple($var)
 {
-  if (!isset($var)  || strlen($var) == 0) {
-  } else {echo $var;}
+    if (!isset($var)  || strlen($var) == 0) {
+    } else {
+        echo $var;
+    }
 }
-
-
 
 function loadresult($apicall)
 {

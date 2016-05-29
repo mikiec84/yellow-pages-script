@@ -166,18 +166,8 @@ if (isset($_GET['search'])) {
       </div>
       <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
       <?php if (!isset($Address) || strlen($Address) == 0) {} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.','.if (!isset($City)  || strlen($City) == 0) {
-    } else {echo $City;}.'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$State.'">'.$State.'</span>,
-<span itemprop="postalCode" content="'.if (!isset($Postal)  || strlen($Postal) == 0) {} else {echo $Postal;}.if (!isset($ZIP)  || strlen($ZIP) == 0) {
-    } else {
-    echo $ZIP;
-  }.'">'.if (!isset($Postal)  || strlen($Postal) == 0) {
-    } else {
-    echo $Postal;
-  }.if (!isset($ZIP)  || strlen($ZIP) == 0) {
-    } else {
-    echo $ZIP;
-  }.'</span>, <span itemprop="addressCountry" content="USA">USA</span></p><small>mailing address</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.','.display_if_exists_simple($City).'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$State.'">'.$State.'</span>,
+<span itemprop="postalCode" content="'.display_if_exists_simple($Postal).display_if_exists_simple($ZIP).'">'.display_if_exists_simple($Postal).display_if_exists_simple($ZIP).'</span>, <span itemprop="addressCountry" content="USA">USA</span></p><small>mailing address</small></blockquote></div>';
 }
     ?>
       </div>
