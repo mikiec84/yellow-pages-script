@@ -69,17 +69,17 @@ if (isset($_GET['search'])) {
           <p class="text-center">
             <?php if (strlen($Category) == 0) {
 } else {
-    echo $Category.' | ';
+    echo $Category;
 }
     ?>
             <?php if (strlen($Category_2) == 0) {
 } else {
-    echo $Category_2.' | ';
+    echo ' | '.$Category_2.;
 }
     ?>
             <?php if (strlen($Category_3) == 0) {
 } else {
-    echo $Category_3;
+    echo ' | '.$Category_3;
 }
     ?>
           </p>
