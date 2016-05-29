@@ -7,9 +7,11 @@ function loadresult($apicall)
   //  print_r($resultArray);
   //  print_r($resultArray);
   echo $apicall;
-    extract($json_array);
-    echo $Business_Name;
-    echo $id;
+  foreach ($json_array as $key => $value) {
+    echo $value;
+//    $$key = $value;
+}
+//  print_r($Business_Name);
 }
 
 function loadresults($apicall)
