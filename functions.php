@@ -3,14 +3,14 @@
 function loadresult($apicall)
 {
     $json = file_get_contents($apicall);
-    $resultArray = json_decode($json, true);
+    $json_array = json_decode($json, true);
   //  print_r($resultArray);
   //  print_r($resultArray);
   echo $apicall;
-    foreach ($resultArray[] as $key => $value) {
-        echo $value;
-        $$key = $value;
-        echo $$key;
+    foreach($json_array as $json){
+     echo $json['key'];
+      //  $$key = $value;
+      //  echo $$key;
     }
 }
 
