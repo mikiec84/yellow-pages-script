@@ -4,13 +4,11 @@ function loadresult($apicall)
 {
     $json = file_get_contents($apicall);
     $json_array = json_decode($json, true);
-  //  print_r($resultArray);
-  //  print_r($resultArray);
   echo $apicall;
     foreach ($json_array[0] as $key => $value) {
-        //  print_r($value);
     $$key = $value;
     }
+
     return $Business_Name;
 }
 
