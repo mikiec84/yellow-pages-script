@@ -85,17 +85,17 @@ if (isset($_GET['search'])) {
           </p>
           <p>&nbsp;</p>
           <p class="text-center">
-            <?php if (strlen($Phone_Number) == 0) {
+            <?php if (isset($Phone_Number) && strlen($Phone_Number) == 0) {
 } else {
     echo '<a class="btn btn-primary btn-lg" href="tel:'.$Phone_Number.'" role="button">'.$Phone_Number.'</a>';
 }
     ?>
-            <?php if (strlen($Email) == 0) {
+            <?php if (isset($Email) && strlen($Email) == 0) {
 } else {
     echo '<a class="btn btn-primary btn-lg" href="mailto:'.$Email.'" role="button">'.$Email.'</a>';
 }
     ?>
-            <?php if (strlen($Website) == 0) {
+            <?php if (isset($Website) && strlen($Website) == 0) {
 } else {
     echo '<a class="btn btn-primary btn-lg" href="'.$Website.'" role="button">'.$Website.'</a>';
 }
@@ -116,27 +116,27 @@ if (isset($_GET['search'])) {
     </div>
     <div class="row">
       <organization itemscope itemtype="http://schema.org/Organization">
-        <?php if (strlen($Business_Name) == 0) {
+        <?php if (isset($Business_Name) && strlen($Business_Name) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="name" content="'.$Business_Name.'">'.$Business_Name.'</span></p><small>company name</small></blockquote></div>';
 }
     ?>
-        <?php if (strlen($Phone_Number) == 0) {
+        <?php if (isset($Phone_Number) && strlen($Phone_Number) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="telephone" content="'.$Phone_Number.'">'.$Phone_Number.'</span></p><small>telephone number</small></blockquote></div>';
 }
     ?>
-        <?php if (strlen($fax_number) == 0) {
+        <?php if (isset($fax_number) && strlen($fax_number) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="faxNumber" content="'.$fax_number.'">'.$fax_number.'</span></p><small>fax number</small></blockquote></div>';
 }
     ?>
-        <?php if (strlen($Email) == 0) {
+        <?php if (isset($Email) && strlen($Email) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="email" content="'.$Email.'"><a href="mailto:'.$Email.'" >'.$Email.'</a></span></p><small>email</small></blockquote></div>';
 }
     ?>
-        <?php if (strlen($Website) == 0) {
+        <?php if (isset($Website) && strlen($Website) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><a href="'.$Website.'" itemprop="url" rel="nofollow target="_new" content="'.$Website.'">'.$Website.'</a></p><small>website</small></blockquote></div>';
 }
@@ -149,100 +149,100 @@ if (isset($_GET['search'])) {
 }
     ?>
       </address>
-      <?php if (strlen($average_earning) == 0) {
+      <?php if (isset($average_earning) && strlen($average_earning) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$average_earning.'</p><small>average earning</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($primary_contact_name) == 0) {
+      <?php if (isset($primary_contact_name) && strlen($primary_contact_name) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$primary_contact_name.'</p><small>primary contact name</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($primary_contact_phone) == 0) {
+      <?php if (isset($primary_contact_phone) && strlen($primary_contact_phone) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$primary_contact_phone.'</p><small>primary contact phone</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($primary_contact_email) == 0) {
+      <?php if (isset($primary_contact_email) && strlen($primary_contact_email) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$primary_contact_email.'</p><small>primary contact email</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($other_contacts) == 0) {
+      <?php if (isset($other_contacts) && strlen($other_contacts) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$other_contacts.'</p><small>other contacts</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($year_founded) == 0) {
+      <?php if (isset($year_founded) && strlen($year_founded) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$year_founded.'</p><small>year founded</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($industry) == 0) {
+      <?php if (isset($industry) && strlen($industry) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$industry.'</p><small>industry</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($naics_primary) == 0) {
+      <?php if (isset($naics_primary) && strlen($naics_primary) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$naics_primary.'</p><small>naics primary</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($naics_secondary) == 0) {
+      <?php if (isset($naics_secondary) && strlen($naics_secondary) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$naics_secondary.'</p><small>naics secondary</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($sic_primary) == 0) {
+      <?php if (isset($sic_primary) && strlen($sic_primary) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$sic_primary.'</p><small>sic primary</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($sic_secondary) == 0) {
+      <?php if (isset($sic_secondary) && strlen($sic_secondary) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$sic_secondary.'</p><small>sic secondary</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($sales_volume) == 0) {
+      <?php if (isset($sales_volume) && strlen($sales_volume) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$sales_volume.'</p><small>sales volume</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($number_of_employees) == 0) {
+      <?php if (isset($number_of_employees) && strlen($number_of_employees) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$number_of_employees.'</p><small>number of employees</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($products_services) == 0) {
+      <?php if (isset($products_services) && strlen($products_services) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$products_services.'</p><small>products services</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($business_activity) == 0) {
+      <?php if (isset($business_activity) && strlen($business_activity) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$business_activity.'</p><small>business activity</small></blockquote></div>';
 }
     ?>
-      <?php if (strlen($profile) == 0) {
+      <?php if (isset($profile) && strlen($profile) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$profile.'</p><small>profile</small></blockquote></div>';
 }
     ?>
 
-    <?php if (strlen($Category) == 0) {
+    <?php if (isset($Category) && strlen($Category) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category.'</p><small>Category 1</small></blockquote></div>';
 }
     ?>
 
-  <?php if (strlen($Category_2) == 0) {
+  <?php if (isset($Category_2) && strlen($Category_2) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category_2.'</p><small>Category 2</small></blockquote></div>';
 }
     ?>
 
-<?php if (strlen($Category_3) == 0) {
+<?php if (isset($Category_3) && strlen($Category_3) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category_3.'</p><small>Category 3</small></blockquote></div>';
 }
