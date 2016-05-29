@@ -145,25 +145,25 @@ if (isset($_GET['search'])) {
       </div>
 
       <?php
-    if (!isset($average_earning)) { display_if_exists($average_earning, 'average earning') };
-    if (!isset($primary_contact_name)) { display_if_exists($primary_contact_name, 'primary contact name')};
-    if (!isset($primary_contact_phone)) { display_if_exists($primary_contact_phone, 'primary contact phone')};
-    if (!isset($primary_contact_email)) { display_if_exists($primary_contact_email, 'primary contact email')};
-    if (!isset($other_contacts)) { display_if_exists($other_contacts, 'other contacts')};
-    if (!isset($year_founded)) { display_if_exists($year_founded, 'year founded')};
-    if (!isset($industry)) { display_if_exists($industry, 'industry')};
-    if (!isset($naics_primary)) { display_if_exists($naics_primary, 'naics primary')};
-    if (!isset($naics_secondary)) { display_if_exists($naics_secondary, 'naics secondary')};
-    if (!isset($sic_primary)) { display_if_exists($sic_primary, 'sic primary')};
-    if (!isset($sic_secondary)) { display_if_exists($sic_secondary, 'sic secondary')};
-    if (!isset($sales_volume)) { display_if_exists($sales_volume, 'sales volume')};
-    if (!isset($number_of_employees)) { display_if_exists($number_of_employees, 'number of employees')};
-    if (!isset($products_services)) { display_if_exists($products_services, 'products services')};
-    if (!isset($business_activity)) { display_if_exists($business_activity, 'business activity')};
-    if (!isset($profile)) { display_if_exists($profile, 'profile')};
-    if (!isset($Category)) { display_if_exists($Category, 'Category 1')};
-    if (!isset($Category_2)) { display_if_exists($Category_2, 'Category 2')};
-    if (!isset($Category_3)) { display_if_exists($Category_3, 'Category 3')};
+    if (!isset($average_earning)) { display_if_exists($average_earning, 'average earning'); };
+    if (!isset($primary_contact_name)) { display_if_exists($primary_contact_name, 'primary contact name');};
+    if (!isset($primary_contact_phone)) { display_if_exists($primary_contact_phone, 'primary contact phone');};
+    if (!isset($primary_contact_email)) { display_if_exists($primary_contact_email, 'primary contact email');};
+    if (!isset($other_contacts)) { display_if_exists($other_contacts, 'other contacts');};
+    if (!isset($year_founded)) { display_if_exists($year_founded, 'year founded');};
+    if (!isset($industry)) { display_if_exists($industry, 'industry');};
+    if (!isset($naics_primary)) { display_if_exists($naics_primary, 'naics primary');};
+    if (!isset($naics_secondary)) { display_if_exists($naics_secondary, 'naics secondary');};
+    if (!isset($sic_primary)) { display_if_exists($sic_primary, 'sic primary');};
+    if (!isset($sic_secondary)) { display_if_exists($sic_secondary, 'sic secondary');};
+    if (!isset($sales_volume)) { display_if_exists($sales_volume, 'sales volume');};
+    if (!isset($number_of_employees)) { display_if_exists($number_of_employees, 'number of employees');};
+    if (!isset($products_services)) { display_if_exists($products_services, 'products services');};
+    if (!isset($business_activity)) { display_if_exists($business_activity, 'business activity');};
+    if (!isset($profile)) { display_if_exists($profile, 'profile');};
+    if (!isset($Category)) { display_if_exists($Category, 'Category 1');};
+    if (!isset($Category_2)) { display_if_exists($Category_2, 'Category 2');};
+    if (!isset($Category_3)) { display_if_exists($Category_3, 'Category 3');};
     ?>
 
 
