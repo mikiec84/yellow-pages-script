@@ -6,6 +6,7 @@ include 'functions.php';
 if (isset($_GET['id'])) {
     $vid = $_GET['id'];
     loadresult("http://<?php echo $domain;?>/api/?type=readresult&value=$vid");
+    echo "http://<?php echo $domain;?>/api/?type=readresult&value=$vid";
 }
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
