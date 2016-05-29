@@ -4,10 +4,10 @@ function loadresult($apicall)
 {
     $json = file_get_contents($apicall);
     $resultArray = json_decode($json, true);
-print_r($resultArray);
-  //  foreach ($resultArray as $key => $value) {
-  //      define($key, $value);
-  //  }
+  //  print_r($resultArray);
+    foreach ($resultArray as $key => $value) {
+        $$key= $value;
+    }
 }
 
 function loadresults($apicall)
