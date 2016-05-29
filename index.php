@@ -3,6 +3,9 @@
 header('Content-Type: text/html; charset=iso-8859-1');
 include 'settings.php';
 include 'functions.php';
+//init Vars
+$Zip = '';
+$Postal = '';
 if (isset($_GET['id'])) {
     $vid = $_GET['id'];
     loadresult('http://'.$domain.'/api/?type=Get+US+Email+result&id='.$vid);
@@ -10,8 +13,7 @@ if (isset($_GET['id'])) {
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
 }
-$Zip = '';
-$Postal = '';?>
+?>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
