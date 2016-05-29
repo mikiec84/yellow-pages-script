@@ -48,7 +48,41 @@ function startapi()
                 $response = array($emparray);
                 echo json_encode($emparray);
           break;
+          case 'Get US General results':
+          header('Content-Type: application/json');
+                    db_connect();
+                    $sql = 'SELECT * FROM `us-email` WHERE `State` <> "" ORDER BY RAND() LIMIT 9';
+                    $result = db_query($sql);
+                      if ($result === false) {
+                          return false;
+                      }
 
+                    $emparray = array();
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $emparray[] = $row;
+                    }
+
+                    $response = array($emparray);
+
+                    echo json_encode($emparray);
+              break;
+              case 'Get US General result':
+              header('Content-Type: application/json');
+                        db_connect();
+                        $sql = "SELECT * FROM `us-email` WHERE `id` = '$id'";
+                        $result = db_query($sql);
+                          if ($result === false) {
+                              return false;
+                          }
+
+                        $emparray = array();
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $emparray[] = $row;
+                        }
+                        fixArrayKey($emparray);
+                        $response = array($emparray);
+                        echo json_encode($emparray);
+                  break;
 }
     } else {
         echo "<form>
@@ -57,6 +91,9 @@ function startapi()
     <option>---------US Email Database------</option>
     <option>Get US Email results</option>
     <option>Get US Email result</option>
+    <option>---------US General Database------</option>
+    <option>Get US General results</option>
+    <option>Get US General result</option>
 	</select>
 	<noscript><input type='submit' value='Submit'></noscript>
 	</form>";
