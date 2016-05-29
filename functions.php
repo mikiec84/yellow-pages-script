@@ -8,6 +8,7 @@ function loadresult($apicall)
   echo $apicall;
     foreach ($resultArray as $key => $value) {
         $$key = $value;
+        echo $Business_Name;
     }
 }
 
