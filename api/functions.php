@@ -8,7 +8,7 @@ function startapi()
 {
     $id = isset($_GET['id']) ? $_GET['id'] : null;
     if (empty($id)) {
-        $id = '159';
+        $id = '1';
     }
     if (isset($_GET['type'])) {
         switch ($_GET['type']) {
