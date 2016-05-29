@@ -5,7 +5,7 @@ include 'settings.php';
 include 'functions.php';
 if (isset($_GET['id'])) {
     $vid = $_GET['id'];
-    loadresult('http://'.$domain.'/api/?type=readresult&value=$vid");
+    loadresult('http://'.$domain.'/api/?type=readresult&value=$vid');
 }
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
