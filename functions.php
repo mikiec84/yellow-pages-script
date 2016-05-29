@@ -11,8 +11,7 @@ function loadresult($apicall)
         //  print_r($value);
     $$key = $value;
     }
-    echo $Business_Name;
-
+    return $Business_Name;
 }
 
 function loadresults($apicall)
