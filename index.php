@@ -318,7 +318,7 @@ if (isset($_GET['search'])) {
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <p>&copy; <?php echo $title;?> | Operated by <a href="<?php echo $operatedby;?>" rel="nofollow"><?php echo $operatedbysort;?></a> <?php echo (isset($vid)) ? ' | <a HREF="mailto:'.$email.'?subject=remove entry from '.$domain.'&body=Hi,please remove my company from your database : '.$_SERVER['REQUEST_URI'].'">Remove Entry</a>' : ' '; ?></p>
+        <p>&copy; <?php echo $title;?> | Operated by <a href="<?php echo $operatedby;?>" rel="nofollow"><?php echo $operatedbysort;?></a> <?php echo (isset($vid)) ? ' | <a HREF="mailto:'.$email.'?subject=remove entry from '.$domain.'&body=Hi,please remove my company from your database : '.$vid.'">Remove Entry</a>' : ' '; ?></p>
       </div>
     </div>
   </div>
