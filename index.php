@@ -74,7 +74,7 @@ if (isset($_GET['search'])) {
     ?>
             <?php if (strlen($Category_2) == 0) {
 } else {
-    echo ' | '.$Category_2.;
+    echo ' | '.$Category_2;
 }
     ?>
             <?php if (strlen($Category_3) == 0) {
