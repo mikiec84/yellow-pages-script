@@ -145,7 +145,7 @@ if (isset($_GET['search'])) {
       <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
       <?php if (strlen($Address) == 0) {
 } else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$Address.'">'.mailing_province.'</span>, <span itemprop="postalCode" content="'.mailing_postal.'">'.mailing_postal.'</span>, <span itemprop="addressCountry" content="Canada">Canada</span></p><small>mailing address</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$Address.'">'.$Address.'</span>, <span itemprop="postalCode" content="'.$Postal.'">'.$Postal.'</span>, <span itemprop="addressCountry" content="'.$USA.'">'.$USA.'</span></p><small>mailing address</small></blockquote></div>';
 }
     ?>
       </address>
@@ -232,21 +232,21 @@ if (isset($_GET['search'])) {
 
     <?php if (strlen($Category) == 0) {
 } else {
-  echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category.'</p><small>Category 1</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category.'</p><small>Category 1</small></blockquote></div>';
 }
-  ?>
+    ?>
 
   <?php if (strlen($Category_2) == 0) {
 } else {
-echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category_2.'</p><small>Category 2</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category_2.'</p><small>Category 2</small></blockquote></div>';
 }
-?>
+    ?>
 
 <?php if (strlen($Category_3) == 0) {
 } else {
-echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category_3.'</p><small>Category 3</small></blockquote></div>';
+    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category_3.'</p><small>Category 3</small></blockquote></div>';
 }
-?>
+    ?>
     </div>
   </div>
   <!-- If the company id is set -->
