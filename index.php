@@ -148,25 +148,26 @@ if (isset($_GET['search'])) {
     ?>
       </address>
 
-      <?php  display_if_exists($average_earning, 'average earning') ;
-       display_if_exists($primary_contact_name, 'primary contact name');
-       display_if_exists($primary_contact_phone, 'primary contact phone');
-       display_if_exists($primary_contact_email, 'primary contact email') ;
-       display_if_exists($other_contacts, 'other contacts');
-       display_if_exists($year_founded, 'year founded') ;
-       display_if_exists($industry, 'industry');
-       display_if_exists($naics_primary, 'naics primary');
-       display_if_exists($naics_secondary, 'naics secondary');
-       display_if_exists($sic_primary, 'sic primary') ;
-       display_if_exists($sic_secondary, 'sic secondary');
-       display_if_exists($sales_volume, 'sales volume') ;
-        display_if_exists($number_of_employees, 'number of employees');
-       display_if_exists($products_services, 'products services') ;
-        display_if_exists($business_activity, 'business activity') ;
-       display_if_exists($profile, 'profile') ;
-        display_if_exists($Category, 'Category 1');
-       display_if_exists($Category_2, 'Category 2');
-       display_if_exists($Category_3, 'Category 3') ;?>
+      <?php  display_if_exists(var $average_earning, 'average earning');
+    display_if_exists($primary_contact_name, 'primary contact name');
+    display_if_exists($primary_contact_phone, 'primary contact phone');
+    display_if_exists($primary_contact_email, 'primary contact email');
+    display_if_exists($other_contacts, 'other contacts');
+    display_if_exists($year_founded, 'year founded');
+    display_if_exists($industry, 'industry');
+    display_if_exists($naics_primary, 'naics primary');
+    display_if_exists($naics_secondary, 'naics secondary');
+    display_if_exists($sic_primary, 'sic primary');
+    display_if_exists($sic_secondary, 'sic secondary');
+    display_if_exists($sales_volume, 'sales volume');
+    display_if_exists($number_of_employees, 'number of employees');
+    display_if_exists($products_services, 'products services');
+    display_if_exists($business_activity, 'business activity');
+    display_if_exists($profile, 'profile');
+    display_if_exists($Category, 'Category 1');
+    display_if_exists($Category_2, 'Category 2');
+    display_if_exists($Category_3, 'Category 3');
+    ?>
 
 
 
