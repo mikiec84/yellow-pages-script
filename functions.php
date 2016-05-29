@@ -7,6 +7,15 @@ function display_if_exists($var, $name)
         echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="name" content="'.$var.'">'.$var.'</span></p><small>'.$name.'</small></blockquote></div>';
     }
 }
+
+function display_if_exists_simple($var)
+{
+  if (!isset($var)  || strlen($var) == 0) {
+  } else {echo $var;}
+}
+
+
+
 function loadresult($apicall)
 {
     $json = file_get_contents($apicall);
