@@ -7,9 +7,9 @@ function loadresult($apicall)
   //  print_r($resultArray);
   //  print_r($resultArray);
   echo $apicall;
-  extract($json_array);
-        echo $json['Business_Name'];
-
+    extract($json_array);
+    echo $Business_Name;
+    echo $id;
 }
 
 function loadresults($apicall)
