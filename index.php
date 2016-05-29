@@ -67,9 +67,21 @@ if (isset($_GET['search'])) {
           <h1 class="text-center"><?php echo $Business_Name;
     ?></h1>
           <p class="text-center">
-            <?php if (strlen($Category) == 0) {} else {echo $Category.' - ';}?>
-            <?php if (strlen($Category_2) == 0) {} else {echo $Category_2.' - ';}?>
-            <?php if (strlen($Category_3) == 0) {} else {echo $Category_3;}?>
+            <?php if (strlen($Category) == 0) {
+} else {
+    echo $Category.' | ';
+}
+    ?>
+            <?php if (strlen($Category_2) == 0) {
+} else {
+    echo $Category_2.' | ';
+}
+    ?>
+            <?php if (strlen($Category_3) == 0) {
+} else {
+    echo $Category_3;
+}
+    ?>
           </p>
           <p>&nbsp;</p>
           <p class="text-center">
