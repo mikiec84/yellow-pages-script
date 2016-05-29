@@ -54,26 +54,26 @@ function loadrandomresults($apicall)
     echo '<div class="row">';
     foreach ($resultArray as $key => $value) {
       if (array_key_exists('State', $resultArray)) {
-        $state = $value['State']
+        $state = $value['State'];
     }
 
   if (array_key_exists('Business Name', $resultArray)) {
-      $cname = $value['Business Name']
+      $cname = $value['Business Name'];
 }
 if (array_key_exists('Category', $resultArray)) {
-  $category = $value['Category']
+  $category = $value['Category'];
 }
 if (array_key_exists('Company Name', $resultArray)) {
-  $cname = $value['Company Name']
+  $cname = $value['Company Name'];
 }
 if (array_key_exists('Zip', $resultArray)) {
-  $state = $value['Zip']
+  $state = $value['Zip'];
 }
 if (array_key_exists('SIC Code Description', $resultArray)) {
-  $category = $value['SIC Code Description']
+  $category = $value['SIC Code Description'];
 }
 
-      $id = $value['id']
+      $id = $value['id'];
         echo '<div class="col-lg-4 col-sm-12 text-center"> <div class="circle">'.$state.'</div><h3><a href="/?id='.$id.'&business='.$cname.'">'.$cname.'</a></h3><p>'.$category.'</p></div>';
     }
     echo '</div>';
