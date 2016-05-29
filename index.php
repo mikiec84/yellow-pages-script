@@ -116,8 +116,9 @@ if (isset($_GET['search'])) {
     </div>
     <div class="row">
       <organization itemscope itemtype="http://schema.org/Organization">
-        
+
   <?php  display_if_exists($Business_Name, 'company name') ?>
+
         <?php if (isset($Phone_Number) && strlen($Phone_Number) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="telephone" content="'.$Phone_Number.'">'.$Phone_Number.'</span></p><small>telephone number</small></blockquote></div>';
@@ -146,104 +147,30 @@ if (isset($_GET['search'])) {
 }
     ?>
       </address>
-      <?php if (isset($average_earning) && strlen($average_earning) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$average_earning.'</p><small>average earning</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($primary_contact_name) && strlen($primary_contact_name) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$primary_contact_name.'</p><small>primary contact name</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($primary_contact_phone) && strlen($primary_contact_phone) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$primary_contact_phone.'</p><small>primary contact phone</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($primary_contact_email) && strlen($primary_contact_email) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$primary_contact_email.'</p><small>primary contact email</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($other_contacts) && strlen($other_contacts) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$other_contacts.'</p><small>other contacts</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($year_founded) && strlen($year_founded) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$year_founded.'</p><small>year founded</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($industry) && strlen($industry) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$industry.'</p><small>industry</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($naics_primary) && strlen($naics_primary) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$naics_primary.'</p><small>naics primary</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($naics_secondary) && strlen($naics_secondary) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$naics_secondary.'</p><small>naics secondary</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($sic_primary) && strlen($sic_primary) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$sic_primary.'</p><small>sic primary</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($sic_secondary) && strlen($sic_secondary) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$sic_secondary.'</p><small>sic secondary</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($sales_volume) && strlen($sales_volume) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$sales_volume.'</p><small>sales volume</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($number_of_employees) && strlen($number_of_employees) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$number_of_employees.'</p><small>number of employees</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($products_services) && strlen($products_services) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$products_services.'</p><small>products services</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($business_activity) && strlen($business_activity) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$business_activity.'</p><small>business activity</small></blockquote></div>';
-}
-    ?>
-      <?php if (isset($profile) && strlen($profile) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$profile.'</p><small>profile</small></blockquote></div>';
-}
-    ?>
 
-    <?php if (isset($Category) && strlen($Category) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category.'</p><small>Category 1</small></blockquote></div>';
-}
-    ?>
+      <?php  display_if_exists($average_earning, 'average earning') ;
+       display_if_exists($primary_contact_name, 'primary contact name');
+       display_if_exists($primary_contact_phone, 'primary contact phone');
+       display_if_exists($primary_contact_email, 'primary contact email') ;
+       display_if_exists($other_contacts, 'other contacts');
+       display_if_exists($year_founded, 'year founded') ;
+       display_if_exists($industry, 'industry');
+       display_if_exists($naics_primary, 'naics primary');
+       display_if_exists($naics_secondary, 'naics secondary');
+       display_if_exists($sic_primary, 'sic primary') ;
+       display_if_exists($sic_secondary, 'sic secondary');
+       display_if_exists($sales_volume, 'sales volume') ;
+        display_if_exists($number_of_employees, 'number of employees');
+       display_if_exists($products_services, 'products services') ;
+        display_if_exists($business_activity, 'business activity') ;
+       display_if_exists($profile, 'profile') ;
+        display_if_exists($Category, 'Category 1');
+       display_if_exists($Category_2, 'Category 2');
+       display_if_exists($Category_3, 'Category 3') ;?>
 
-  <?php if (isset($Category_2) && strlen($Category_2) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category_2.'</p><small>Category 2</small></blockquote></div>';
-}
-    ?>
 
-<?php if (isset($Category_3) && strlen($Category_3) == 0) {
-} else {
-    echo '<div class="col-6 col-lg-6"><blockquote><p>'.$Category_3.'</p><small>Category 3</small></blockquote></div>';
-}
-    ?>
+
+
     </div>
   </div>
   <!-- If the company id is set -->
