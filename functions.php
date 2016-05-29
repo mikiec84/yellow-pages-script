@@ -6,7 +6,7 @@ function loadresult($apicall)
     $resultArray = json_decode($json, true);
   //  print_r($resultArray);
     foreach ($resultArray as $key => $value) {
-        $$key= $value;
+        $$key = $value;
     }
 }
 
