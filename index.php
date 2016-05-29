@@ -148,7 +148,7 @@ if (isset($_GET['search'])) {
     ?>
       </address>
 
-      <?php  display_if_exists($average_earning, 'average earning');
+      <?php  display_if_exists(!empty($average_earning), 'average earning');
     display_if_exists($primary_contact_name, 'primary contact name');
     display_if_exists($primary_contact_phone, 'primary contact phone');
     display_if_exists($primary_contact_email, 'primary contact email');
