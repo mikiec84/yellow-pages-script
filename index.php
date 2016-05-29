@@ -67,12 +67,12 @@ if (isset($_GET['search'])) {
           <h1 class="text-center"><?php echo $Business_Name;
     ?></h1>
           <?php
-          $prof = profile;
+          $prof = $Category;
     $array = explode('.', $prof);
     $prof = $array[0];
     ?>
           <p class="text-center">
-            <?php if (strlen(profile) == 0) {
+            <?php if (strlen($Category) == 0) {
 } else {
     echo $prof;
 }
