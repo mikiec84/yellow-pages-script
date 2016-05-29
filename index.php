@@ -20,7 +20,7 @@ if (isset($_GET['search'])) {
     ?>
 <?php if (!isset($Business_Name)  || strlen($Business_Name) == 0) {
 } else {
-    echo '<title>'.$Business_Name.' - '.(substr($Phone_Number, 0, -3).'xxx').' Information provided by Canadawhiz.com</title>';
+    echo '<title>'.$Business_Name.' - '.(substr($Phone_Number, 0, -3).'xxx').' Information provided by '.$domain.'/title>';
 }
     ?>
 <?php
