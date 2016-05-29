@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
 }
-$ZIP = '';?>
+$Zip = '';?>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -174,7 +174,7 @@ $ZIP = '';?>
       <?php if (!isset($Address) || strlen($Address) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.','.display_if_exists_simple($City).'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$State.'">'.$State.'</span>,
-<span itemprop="postalCode" content="'.display_if_exists_simple($Postal).display_if_exists_simple($ZIP).'">'.display_if_exists_simple($Postal).display_if_exists_simple($ZIP).'</span>, <span itemprop="addressCountry" content="USA">USA</span></p><small>mailing address</small></blockquote></div>';
+<span itemprop="postalCode" content="'.display_if_exists_simple($Postal).display_if_exists_simple($Zip).'">'.display_if_exists_simple($Postal).display_if_exists_simple($Zip).'</span>, <span itemprop="addressCountry" content="USA">USA</span></p><small>mailing address</small></blockquote></div>';
 }
     ?>
       </div>
