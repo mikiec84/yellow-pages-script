@@ -53,7 +53,28 @@ function loadrandomresults($apicall)
     $resultArray = json_decode($json, true);
     echo '<div class="row">';
     foreach ($resultArray as $key => $value) {
-        echo '<div class="col-lg-4 col-sm-12 text-center"> <div class="circle">'.$value['State'].'</div><h3><a href="/?id='.$value['id'].'&business='.$value['Business Name'].'">'.$value['Business Name'].'</a></h3><p>'.$value['Category'].'</p></div>';
+      if (array_key_exists('State', $resultArray)) {
+        $state = $value['State']
+    }
+
+  if (array_key_exists('Business Name', $resultArray)) {
+      $cname = $value['Business Name']
+}
+if (array_key_exists('Category', $resultArray)) {
+  $category = $value['Category']
+}
+if (array_key_exists('Company Name', $resultArray)) {
+  $cname = $value['Company Name']
+}
+if (array_key_exists('Zip', $resultArray)) {
+  $state = $value['Zip']
+}
+if (array_key_exists('SIC Code Description', $resultArray)) {
+  $category = $value['SIC Code Description']
+}
+
+      $id = $value['id']
+        echo '<div class="col-lg-4 col-sm-12 text-center"> <div class="circle">'.$state.'</div><h3><a href="/?id='.$id.'&business='.$cname.'">'.$cname.'</a></h3><p>'.$category.'</p></div>';
     }
     echo '</div>';
 }
