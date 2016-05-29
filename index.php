@@ -300,7 +300,7 @@ if (isset($_GET['search'])) {
       <div class="col-xs-6 col-lg-4">
         <h3>Claim / Edit your Business</h3>
         <p> <i class="icon-desktop "></i> Do you something not correct in your entry? We charge an administration fee of 10$ per change (currently free). Click the link bellow to pay the fee via Paypal and your change will be implemented in the next 5 business days.</p>
-      <?php echo isset($vid) ? '<p><a class="btn btn-default" href="mailto:<?php echo $email;?>?subject=edit entry from '.$domain.'&body=Hi,please edit my company on your database : '.$_SERVER['REQUEST_URI'].' Here are the changes I need :">Edit Entry </a></p>' : ' '; ?>
+      <?php echo isset($vid) ? '<p><a class="btn btn-default" HREF="mailto:'.$email.'?subject=edit entry from '.$domain.'&body=Hi,please edit my company on your database : '.$_SERVER['REQUEST_URI'].' Here are the changes I need :">Edit Entry </a></p>' : ' '; ?>
       </div>
       <div class="col-xs-6 col-lg-4">
         <h3>Request Removal</h3>
