@@ -64,20 +64,17 @@ if (isset($_GET['search'])) {
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h1 class="text-center"><?php echo $Business_Name;
-    ?></h1>
+          <h1 class="text-center"><?php echo $Business_Name;  ?></h1>
           <p class="text-center">
             <?php if (strlen($Category) == 0) {
 } else {
     echo $Category;
 }
-    ?>
-            <?php if (strlen($Category_2) == 0) {
+if (strlen($Category_2) == 0) {
 } else {
     echo ' | '.$Category_2;
 }
-    ?>
-            <?php if (strlen($Category_3) == 0) {
+if (strlen($Category_3) == 0) {
 } else {
     echo ' | '.$Category_3;
 }
@@ -85,17 +82,15 @@ if (isset($_GET['search'])) {
           </p>
           <p>&nbsp;</p>
           <p class="text-center">
-            <?php if (!isset($Phone_Number) ||strlen($Phone_Number) == 0) {
+<?php if (!isset($Phone_Number) || strlen($Phone_Number) == 0) {
 } else {
     echo '<a class="btn btn-primary btn-lg" href="tel:'.$Phone_Number.'" role="button">'.$Phone_Number.'</a>';
 }
-    ?>
-            <?php if (!isset($Email) || strlen($Email) == 0) {
+if (!isset($Email) || strlen($Email) == 0) {
 } else {
     echo '<a class="btn btn-primary btn-lg" href="mailto:'.$Email.'" role="button">'.$Email.'</a>';
 }
-    ?>
-            <?php if (!isset($Website) || strlen($Website) == 0) {
+ if (!isset($Website) || strlen($Website) == 0) {
 } else {
     echo '<a class="btn btn-primary btn-lg" href="'.$Website.'" role="button">'.$Website.'</a>';
 }
