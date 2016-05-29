@@ -85,17 +85,17 @@ if (isset($_GET['search'])) {
           </p>
           <p>&nbsp;</p>
           <p class="text-center">
-            <?php if (isset($Phone_Number) && strlen($Phone_Number) == 0) {
+            <?php if (!isset($Phone_Number) ||strlen($Phone_Number) == 0) {
 } else {
     echo '<a class="btn btn-primary btn-lg" href="tel:'.$Phone_Number.'" role="button">'.$Phone_Number.'</a>';
 }
     ?>
-            <?php if (isset($Email) && strlen($Email) == 0) {
+            <?php if (!isset($Email) || strlen($Email) == 0) {
 } else {
     echo '<a class="btn btn-primary btn-lg" href="mailto:'.$Email.'" role="button">'.$Email.'</a>';
 }
     ?>
-            <?php if (isset($Website) && strlen($Website) == 0) {
+            <?php if (!isset($Website) || strlen($Website) == 0) {
 } else {
     echo '<a class="btn btn-primary btn-lg" href="'.$Website.'" role="button">'.$Website.'</a>';
 }
