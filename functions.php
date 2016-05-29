@@ -53,27 +53,27 @@ function loadrandomresults($apicall)
     $resultArray = json_decode($json, true);
     echo '<div class="row">';
     foreach ($resultArray as $key => $value) {
-      $cname ='';
-      $id ='';
-      $category ='';
-      $state ='';
-        if (array_key_exists('State', $resultArray)) {
+        $cname = '';
+        $id = '';
+        $category = '';
+        $state = '';
+        if (array_key_exists('State', $value)) {
             $state = $value['State'];
         }
 
-        if (array_key_exists('Business Name', $resultArray)) {
+        if (array_key_exists('Business Name', $value)) {
             $cname = $value['Business Name'];
         }
-        if (array_key_exists('Category', $resultArray)) {
+        if (array_key_exists('Category', $value)) {
             $category = $value['Category'];
         }
-        if (array_key_exists('Company Name', $resultArray)) {
+        if (array_key_exists('Company Name', $value)) {
             $cname = $value['Company Name'];
         }
-        if (array_key_exists('Zip', $resultArray)) {
+        if (array_key_exists('Zip', $value)) {
             $state = $value['Zip'];
         }
-        if (array_key_exists('SIC Code Description', $resultArray)) {
+        if (array_key_exists('SIC Code Description', $value)) {
             $category = $value['SIC Code Description'];
         }
 
