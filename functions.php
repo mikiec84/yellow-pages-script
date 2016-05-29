@@ -69,7 +69,7 @@ function loadrandomresults($apicall)
         if (array_key_exists('SIC Code Description', $value)) {
             $category = $value['SIC Code Description'];
         }
-$state = $value['State'];
+        $state = $value['State'];
         $id = $value['id'];
         echo '<div class="col-lg-4 col-sm-12 text-center"> <div class="circle">'.$state.'</div><h3><a href="/?id='.$id.'&business='.$cname.'">'.$cname.'</a></h3><p>'.$category.'</p></div>';
     }
