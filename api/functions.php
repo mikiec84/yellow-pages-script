@@ -51,7 +51,7 @@ function startapi()
           case 'Get US General results':
           header('Content-Type: application/json');
                     db_connect();
-                    $sql = 'SELECT * FROM `us-email` WHERE `State` <> "" ORDER BY RAND() LIMIT 9';
+                    $sql = 'SELECT * FROM `us-general` WHERE `State` <> "" ORDER BY RAND() LIMIT 9';
                     $result = db_query($sql);
                       if ($result === false) {
                           return false;
@@ -69,7 +69,7 @@ function startapi()
               case 'Get US General result':
               header('Content-Type: application/json');
                         db_connect();
-                        $sql = "SELECT * FROM `us-email` WHERE `id` = '$id'";
+                        $sql = "SELECT * FROM `us-general` WHERE `id` = '$id'";
                         $result = db_query($sql);
                           if ($result === false) {
                               return false;
