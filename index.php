@@ -66,17 +66,10 @@ if (isset($_GET['search'])) {
         <div class="col-xs-12">
           <h1 class="text-center"><?php echo $Business_Name;
     ?></h1>
-          <?php
-          $prof = $Category;
-    $array = explode('.', $prof);
-    $prof = $array[0];
-    ?>
           <p class="text-center">
-            <?php if (strlen($Category) == 0) {
-} else {
-    echo $prof;
-}
-    ?>
+            <?php if (strlen($Category) == 0) {} else {echo $Category.' - ';}?>
+            <?php if (strlen($Category_2) == 0) {} else {echo $Category_2.' - ';}?>
+            <?php if (strlen($Category_3) == 0) {} else {echo $Category_3;}?>
           </p>
           <p>&nbsp;</p>
           <p class="text-center">
