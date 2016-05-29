@@ -18,7 +18,7 @@ if (isset($_GET['search'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php if (isset($vid)) {
     ?>
-<?php if ($Phone_Number) || strlen($Business_Name) == 0) {
+<?php if (!isset($Business_Name)  || strlen($Business_Name) == 0) {
 } else {
     echo '<title>'.$Business_Name.' - '.(substr($Phone_Number, 0, -3).'xxx').' Information provided by Canadawhiz.com</title>';
 }
@@ -67,15 +67,15 @@ if (isset($_GET['search'])) {
           <h1 class="text-center"><?php echo $Business_Name;
     ?></h1>
           <p class="text-center">
-            <?php if ($Phone_Number) || strlen($Category) == 0) {
+            <?php if (!isset($Category)  || strlen($Category) == 0) {
 } else {
     echo $Category;
 }
-    if ($Phone_Number) || strlen($Category_2) == 0) {
+    if (!isset($Category_2) || strlen($Category_2) == 0) {
     } else {
         echo ' | '.$Category_2;
     }
-    if ($Phone_Number) || strlen($Category_3) == 0) {
+    if (!isset($Category_3) || strlen($Category_3) == 0) {
     } else {
         echo ' | '.$Category_3;
     }
