@@ -115,7 +115,7 @@ if (isset($_GET['search'])) {
       </div>
     </div>
     <div class="row">
-      <organization itemscope itemtype="http://schema.org/Organization">
+      <div itemscope itemtype="http://schema.org/Organization">
 
   <?php  display_if_exists($Business_Name, 'company name') ?>
 
@@ -139,14 +139,14 @@ if (isset($_GET['search'])) {
     echo '<div class="col-6 col-lg-6"><blockquote><p><a href="'.$Website.'" itemprop="url" rel="nofollow target="_new" content="'.$Website.'">'.$Website.'</a></p><small>website</small></blockquote></div>';
 }
     ?>
-      </organization>
-      <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      </div>
+      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
       <?php if (!isset($Address) || strlen($Address) == 0) {
 } else {
     echo '<div class="col-6 col-lg-6"><blockquote><p><span itemprop="streetAddress" content="'.$Address.'">'.$Address.'</span>, <span itemprop="addressRegion" content="'.$State.'">'.$State.'</span>, <span itemprop="postalCode" content="'.$Postal.'">'.$Postal.'</span>, <span itemprop="addressCountry" content="USA">USA</span></p><small>mailing address</small></blockquote></div>';
 }
     ?>
-      </address>
+      </div>
 
       <?php
     display_if_exists(!empty($average_earning), 'average earning');
