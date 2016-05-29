@@ -105,7 +105,8 @@ if (isset($_GET['search'])) {
   <div class="container ">
     <div class="row">
       <div class="col-lg-12 page-header text-center">
-        <h2>Everything we have on <?php print_r($resultArray); echo $resultArray['Business Name'];
+        <h2>Everything we have on <?php print_r($resultArray);
+    echo $resultArray['Business Name'];
     ?></h2>
       </div>
     </div>
